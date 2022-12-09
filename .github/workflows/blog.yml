@@ -29,3 +29,5 @@ jobs:
         run: trunk build --dist ".vercel/output"
       - name: deploy
         run: vercel deploy --yes --prebuilt --prod --token=wbX9rrhJd4P2kFnRFt4oDmHB
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
