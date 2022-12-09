@@ -5,6 +5,7 @@ use leptos_router::*;
 mod routes;
 use routes::about::*;
 use routes::blog::*;
+use routes::error::*;
 use routes::home::*;
 
 // TODO: handle responsive
@@ -21,6 +22,8 @@ pub fn App(cx: Scope) -> Element {
                         <Route path="" element=move |_cx| view! { cx, <Home/> } />
                         <Route path="blog" element=move |_cx| view! { cx, <Blog/> } />
                         <Route path="about" element=move |_cx| view! { cx, <About/> } />
+
+                        <Route path="*" element=move |_cx| view! { cx, <PageNotFound/> } />
                     </Routes>
                 </main>
             </Router>
