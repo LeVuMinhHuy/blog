@@ -1,0 +1,22 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: rustlang/rust:nightly-slim
+    steps:
+      - checkout
+      - run:
+          name: "Install trunk"
+          command: "cargo install trunk"
+      - run:
+          name: "Trunk build"
+          command: "trunk build"
+      - run:
+          name: "Check dist"
+          command: "ls dist"
+      # Need to zip dist folder and send to EC2
+
+workflows:
+  build:
+    jobs:
+      - build
