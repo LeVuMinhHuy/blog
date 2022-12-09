@@ -24,3 +24,5 @@ jobs:
         run: rustup target add wasm32-unknown-unknown
       - name: now build
         run: trunk build
+      - name: deploy
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
