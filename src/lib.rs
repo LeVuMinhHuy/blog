@@ -24,7 +24,7 @@ pub fn App(cx: Scope) -> Element {
 
                         <Route path="blog" element=move |_cx| view! { cx, <Blog/> } >
                             <Route path=":id" element=move |_cx| view! {cx, <Post /> }/>
-                            <Route path="/" element=move |_| view! { cx,  <Blog /> } />
+                            <Route path="/blog" element=move |_| view! { cx,  <Blog /> } />
                         </Route>
 
                         <Route path="about" element=move |_cx| view! { cx, <About/> } />
