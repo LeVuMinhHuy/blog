@@ -27,6 +27,10 @@ pub fn Blog(_cx: Scope) -> Element {
                         <span class="post-date">"08-12-2022"</span>
                         <A href="2">"from virtual dom to fine-grained reactivity, how leptos works"</A>
                     </div>
+                    <div class="post">
+                        <span class="post-date">"07-12-2022"</span>
+                        <A href="2">"wasm with trunk"</A>
+                    </div>
 
                 </div>
 
