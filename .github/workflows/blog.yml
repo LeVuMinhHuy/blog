@@ -1,9 +1,9 @@
 name: Blog
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 env:
   CARGO_TERM_COLOR: always
@@ -12,14 +12,15 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Install trunk
-      run: cargo install trunk
-    - name: Install wasm
-      run: rustup target add wasm32-unknown-unknown
-    - name: Build
-      run: trunk build
+      - uses: actions/checkout@v3
+      - name: nightly i choose u
+        run: rustup default nightly
+      - name: now trunk
+        run: cargo install trunk
+      - name: now wasm
+        run: rustup target add wasm32-unknown-unknown
+      - name: now build
+        run: trunk build
