@@ -25,4 +25,4 @@ jobs:
       - name: now build
         run: trunk build
       - name: deploy
-        run: vercel deploy --prebuilt --prod --token=${ VERCEL_TOKEN }
+        run: vercel deploy --prebuilt --prod --token=wbX9rrhJd4P2kFnRFt4oDmHB
