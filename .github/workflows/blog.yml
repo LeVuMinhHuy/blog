@@ -24,7 +24,7 @@ jobs:
       - name: now wasm
         run: rustup target add wasm32-unknown-unknown
       - name: prepare vercel
-        run: mkdir -p ./vercel/output
+        run: mkdir -p .vercel/output
       - name: now build
         run: trunk build --dist ".vercel/output"
       - name: deploy
