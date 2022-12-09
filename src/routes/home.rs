@@ -8,7 +8,7 @@ pub fn Home(_cx: Scope) -> Element {
 
     view! {
         _cx,
-        <div class="container">
+        <div>
             <div class="data">
                 <div class="intro">
                     <p>"hi there"</p>

@@ -6,7 +6,7 @@ use leptos_router::*;
 pub fn Blog(_cx: Scope) -> Element {
     view! {
         _cx,
-        <div class="container">
+        <div>
             <div class="data">
                 <div class="title">
                     <p>"recently posts"</p>

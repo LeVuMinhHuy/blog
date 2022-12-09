@@ -17,7 +17,7 @@ pub fn App(cx: Scope) -> Element {
         cx,
         <div id="root">
             <Router>
-                <main>
+                <main class="container">
                     <Routes>
                         <Route path="" element=move |_cx| view! { cx, <Home/> } />
                         <Route path="blog" element=move |_cx| view! { cx, <Blog/> } />

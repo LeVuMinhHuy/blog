@@ -6,7 +6,7 @@ use leptos_router::*;
 pub fn PageNotFound(_cx: Scope) -> Element {
     view! {
         _cx,
-        <div class="container">
+        <div>
             <div class="data">
                 <p>"hey it&apos;s 404"</p>
                 <br/>

@@ -103,7 +103,33 @@ li > a:hover,
 }
 
 @media screen and (prefers-color-scheme: light) {
+  li > a,
+  .post > a {
+    color: black;
+  }
+
+  li > a:hover,
+  .post > a:hover {
+    box-shadow: inset 200px 0 0 0 darkgrey;
+  }
+
   .nav-text > a:hover {
     color: black;
+  }
+}
+
+.mode {
+  position: absolute;
+  width: 38px;
+  height: 12px;
+  background-color: white;
+  right: 100px;
+  top: 50px;
+  cursor: pointer;
+}
+
+@media screen and (prefers-color-scheme: light) {
+  .mode {
+    background-color: var(--dark);
   }
 }
