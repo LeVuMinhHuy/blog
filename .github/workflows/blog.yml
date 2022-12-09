@@ -28,4 +28,4 @@ jobs:
       - name: now build
         run: trunk build --dist ".vercel/output"
       - name: deploy
-        run: vercel deploy --prebuilt --prod --token=wbX9rrhJd4P2kFnRFt4oDmHB
+        run: vercel deploy --yes --prebuilt --prod --token=wbX9rrhJd4P2kFnRFt4oDmHB
