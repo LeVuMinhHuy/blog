@@ -1,3 +1,8 @@
+:root {
+  --dark: rgb(34, 39, 46);
+  --dark-highlight: rgb(71, 78, 104);
+}
+
 @font-face {
   font-family: cascadiaCode;
   src: url(font.woff2) format("woff2");
@@ -6,6 +11,15 @@
 body {
   margin: 0;
   font-family: cascadiaCode, sans serif;
+  background-color: var(--dark);
+  color: white;
+}
+
+@media screen and (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: black;
+  }
 }
 
 a {
@@ -44,7 +58,13 @@ li {
 }
 
 .nav-text > a:hover {
-  color: black;
+  color: white;
+}
+
+@media screen and (prefers-color-scheme: light) {
+  .nav-text > a:hover {
+    color: black;
+  }
 }
 
 .posts {
@@ -73,11 +93,17 @@ li {
 
 li > a,
 .post > a {
-  color: black;
+  color: white;
   transition: box-shadow 0.3s ease-in-out;
 }
 
 li > a:hover,
 .post > a:hover {
-  box-shadow: inset 200px 0 0 0 lightgray;
+  box-shadow: inset 200px 0 0 0 var(--dark-highlight);
+}
+
+@media screen and (prefers-color-scheme: light) {
+  .nav-text > a:hover {
+    color: black;
+  }
 }
