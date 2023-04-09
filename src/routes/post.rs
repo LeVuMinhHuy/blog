@@ -9,6 +9,10 @@ pub fn Post(cx: Scope) -> Element {
 
     log!("{id}");
 
+    // TODO:
+    // 1. markdown to html
+    // 2. get id and link it to the post
+
     view! {
         cx,
         <div>

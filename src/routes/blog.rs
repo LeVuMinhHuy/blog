@@ -4,6 +4,7 @@ use leptos_router::*;
 #[component]
 #[allow(non_snake_case)]
 pub fn Blog(_cx: Scope) -> Element {
+    // TODO: auto generate list of posts
     view! {
         _cx,
         <div>
