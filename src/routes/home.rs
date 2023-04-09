@@ -1,11 +1,9 @@
+use crate::routes::nav::{Nav, NavElements, NavProps};
 use leptos::*;
-use leptos_router::*;
 
 #[component]
 #[allow(non_snake_case)]
-pub fn Home(_cx: Scope) -> Element {
-    //log!("rendering homepage");
-
+pub fn Home(_cx: Scope) -> impl IntoView {
     view! {
         _cx,
         <div>
@@ -19,12 +17,7 @@ pub fn Home(_cx: Scope) -> Element {
                     <p>"sometimes i also do write, about tech and thoughts, here"</p>
                 </div>
 
-                <nav class="nav">
-                    <div class="nav-text">
-                       <A exact=true href="/blog"><p>"# blog"</p></A>
-                       <A href="/about"><p>"# more about me"</p></A>
-                    </div>
-                </nav>
+                <Nav exclude={Some(NavElements::Home)}/>
             </div>
         </div>
     }

@@ -1,9 +1,9 @@
+use crate::routes::nav::{Nav, NavElements, NavProps};
 use leptos::*;
-use leptos_router::*;
 
 #[component]
 #[allow(non_snake_case)]
-pub fn About(_cx: Scope) -> Element {
+pub fn About(_cx: Scope) -> impl IntoView {
     view! {
         _cx,
         <div>
@@ -11,8 +11,8 @@ pub fn About(_cx: Scope) -> Element {
                 <div class="intro">
                     <p>"hi there again"</p>
                     <br/>
-                    <p>"i&apos;m trying to be an any-stack developer, which means i&apos;d love to explore new stacks, languages, ... in order to build more awesome, performant project."</p>
-                    <p>"i&apos;m using Arch linux btw, with Awesomewm; coding JS, Rust in Neovim; typing on an 65% keyboard and working remotely in my tiny cozy room."</p>
+                    <p>"i'm trying to be an any-stack developer, which means i'd love to explore new stacks, languages, ... in order to build more awesome, performant project."</p>
+                    <p>"i'm using Arch linux btw, with Awesomewm; coding JS, Rust in Neovim; typing on an 65% keyboard and working remotely in my tiny cozy room."</p>
                     <p>" i love watching tv series, youtube videos, twitch streams, writing things, sometimes write songs, running, swimming, badminton, chess ..."</p>
                     <br />
                     <p>"so, click if you"</p>
@@ -25,15 +25,11 @@ pub fn About(_cx: Scope) -> Element {
                     </ul>
 
                     <br/>
-                    <p>"i&apos;m also proud to say that this site is built with zero line of js. it's all about rust and wasm, based on leptos"</p>
+                    <p>"i'm also proud to say that this site is built with zero line of js. it's all about rust and wasm, based on leptos"</p>
                 </div>
 
-                <nav class="nav">
-                    <div class="nav-text">
-                       <A exact=true href="/blog"><p>"# blog"</p></A>
-                       <A exact=true href="/"><p>"# home"</p></A>
-                    </div>
-                </nav>
+
+                <Nav exclude={Some(NavElements::About)}/>
             </div>
         </div>
     }

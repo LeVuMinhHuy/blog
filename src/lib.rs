@@ -9,23 +9,21 @@ use routes::error::*;
 use routes::home::*;
 use routes::post::*;
 
-// TODO: handle responsive
-
 #[allow(non_snake_case)]
-pub fn App(cx: Scope) -> Element {
-    provide_context(cx, MetaContext::default());
+#[component]
+pub fn App(cx: Scope) -> impl IntoView {
+    provide_meta_context(cx);
     view! {
         cx,
         <div id="root">
             <Router>
                 <main class="container">
                     <Routes>
-                        <Route path="" element=move |_cx| view! { cx, <Home/> } />
-                        <Route path="blog" element=move |_cx| view! { cx, <Blog/> } />
-                        <Route path="blog/:id" element=move |_cx| view! {cx, <Post /> }/>
-                        <Route path="about" element=move |_cx| view! { cx, <About/> } />
-
-                        <Route path="*" element=move |_cx| view! { cx, <PageNotFound/> } />
+                        <Route path="" view=|cx| view! { cx, <Home/> } />
+                        <Route path="blog" view=|cx| view! { cx, <Blog/> } />
+                        <Route path="blog/:id" view=|cx|  view! {cx, <Post /> }/>
+                        <Route path="about" view=|cx| view! { cx, <About/> } />
+                        <Route path="*" view=|cx| view! { cx, <PageNotFound/> } />
                     </Routes>
                 </main>
             </Router>
