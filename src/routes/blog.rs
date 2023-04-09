@@ -37,7 +37,7 @@ pub fn Blog(_cx: Scope) -> impl IntoView {
                 </div>
 
 
-                <Nav exclude={Some()}/>
+                <Nav exclude={Some(NavElements::Blog)}/>
             </div>
         </div>
     }

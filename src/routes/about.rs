@@ -20,7 +20,7 @@ pub fn About(_cx: Scope) -> impl IntoView {
                         <li><a href="https://www.linkedin.com/in/huy-le-vu-minh/" target="_blank">"think there is a job that suitable for me"</a></li>
                         <li><a href="https://github.com/LeVuMinhHuy" target="_blank">"wanna check out some of my projects"</a></li>
                         <li><a href="https://www.facebook.com/moreromem" target="_blank">"comfortable to drop some messages"</a></li>
-                        <li><a href="/">"or just want to read"</a></li>
+                        <li><a href="/blog">"or just want to read"</a></li>
 
                     </ul>
 
