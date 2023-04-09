@@ -12,6 +12,8 @@ that's that :crab-pls:
 -   dark version
     ![how it look](./.pics/overview-dark.png)
 
+now, i stick with light version only, trying to make my life brighter lol
+
 == how to build
 
 ```
