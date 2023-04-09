@@ -11,9 +11,9 @@ pub fn About(_cx: Scope) -> Element {
                 <div class="intro">
                     <p>"hi there again"</p>
                     <br/>
-                    <p>"people call me ted, long story"</p>
-                    <p>"i currently am a fullstack developer, mostly working with nextjs, nodejs and devops, data stuffs, just like any other fullstack swe in the world. i&apos;m also using arch linux btw, coding rust in neovim blabla."</p>
-                    <p>"more than that, i love watching tv series, youtube videos, twitch streams, writing things, sometimes write songs, running, swimming, badminton, chess ..."</p>
+                    <p>"i&apos;m trying to be an any-stack developer, which means i&apos;d love to explore new stacks, languages, ... in order to build more awesome, performant project."</p>
+                    <p>"i&apos;m using Arch linux btw, with Awesomewm; coding JS, Rust in Neovim; typing on an 65% keyboard and working remotely in my tiny cozy room."</p>
+                    <p>" i love watching tv series, youtube videos, twitch streams, writing things, sometimes write songs, running, swimming, badminton, chess ..."</p>
                     <br />
                     <p>"so, click if you"</p>
                     <ul>

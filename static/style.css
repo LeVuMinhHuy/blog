@@ -1,25 +1,31 @@
 :root {
-  --dark: rgb(34, 39, 46);
-  --dark-highlight: rgb(71, 78, 104);
+  --highlight: #a9a9a9;
+  --color-base: #444;
 }
 
 @font-face {
-  font-family: cascadiaCode;
-  src: url(font.woff2) format("woff2");
+  font-family: Sarasa Mono CL;
+  src: url(font-sarasa.woff2) format("woff2");
 }
 
 body {
-  margin: 0;
-  font-family: cascadiaCode, sans serif;
-  background-color: var(--dark);
-  color: white;
+  margin: 40px auto;
+  max-width: 640px;
+  font-family: Sarasa Mono CL;
+  color: var(--color-base);
+  line-height: 1.6;
+  font-size: 18px;
+  padding: 0 10px;
+  height: calc(100vh - 96px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (prefers-color-scheme: light) {
-  body {
-    background-color: white;
-    color: black;
-  }
+#root {
+  overflow: auto;
+  scrollbar-width: none;
 }
 
 a {
@@ -31,16 +37,9 @@ li {
 }
 
 .container {
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .data {
-  max-width: 800px;
-  line-height: 2;
 }
 
 .nav {
@@ -58,13 +57,7 @@ li {
 }
 
 .nav-text > a:hover {
-  color: white;
-}
-
-@media screen and (prefers-color-scheme: light) {
-  .nav-text > a:hover {
-    color: black;
-  }
+  color: var(--color-base);
 }
 
 .posts {
@@ -93,29 +86,12 @@ li {
 
 li > a,
 .post > a {
-  color: white;
-  transition: box-shadow 0.3s ease-in-out;
+  color: var(--color-base);
 }
 
 li > a:hover,
 .post > a:hover {
-  box-shadow: inset 200px 0 0 0 var(--dark-highlight);
-}
-
-@media screen and (prefers-color-scheme: light) {
-  li > a,
-  .post > a {
-    color: black;
-  }
-
-  li > a:hover,
-  .post > a:hover {
-    box-shadow: inset 200px 0 0 0 darkgrey;
-  }
-
-  .nav-text > a:hover {
-    color: black;
-  }
+  box-shadow: inset 0 -2px 0 var(--highlight);
 }
 
 .mode {
@@ -126,10 +102,4 @@ li > a:hover,
   right: 100px;
   top: 50px;
   cursor: pointer;
-}
-
-@media screen and (prefers-color-scheme: light) {
-  .mode {
-    background-color: var(--dark);
-  }
 }
