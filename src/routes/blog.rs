@@ -1,9 +1,10 @@
+use crate::routes::nav::{Nav, NavElements, NavProps};
 use leptos::*;
 use leptos_router::*;
 
 #[component]
 #[allow(non_snake_case)]
-pub fn Blog(_cx: Scope) -> Element {
+pub fn Blog(_cx: Scope) -> impl IntoView {
     // TODO: auto generate list of posts
     view! {
         _cx,
@@ -35,12 +36,8 @@ pub fn Blog(_cx: Scope) -> Element {
 
                 </div>
 
-                <nav class="nav">
-                    <div class="nav-text">
-                       <A exact=true href="/"><p>"# home"</p></A>
-                       <A href="/about"><p>"# more about me"</p></A>
-                    </div>
-                </nav>
+
+                <Nav exclude={Some()}/>
             </div>
         </div>
     }

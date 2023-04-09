@@ -1,9 +1,10 @@
+use crate::routes::nav::{Nav, NavElements, NavProps};
 use leptos::*;
 use leptos_router::*;
 
 #[component]
 #[allow(non_snake_case)]
-pub fn Post(cx: Scope) -> Element {
+pub fn Post(cx: Scope) -> impl IntoView {
     let params = use_params_map(cx);
     let id = params().get("id").cloned().unwrap_or_default();
 
@@ -23,12 +24,8 @@ pub fn Post(cx: Scope) -> Element {
 
                 </div>
 
-                <nav class="nav">
-                    <div class="nav-text">
-                       <A exact=true href="/blog"><p>"# blog"</p></A>
-                       <A href="/about"><p>"# more about me"</p></A>
-                    </div>
-                </nav>
+
+                <Nav exclude={Some(NavElements::Blog)}/>
             </div>
         </div>
     }
