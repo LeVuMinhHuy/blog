@@ -6,9 +6,9 @@ use leptos_router::*;
 #[allow(non_snake_case)]
 pub fn Post(cx: Scope) -> impl IntoView {
     let params = use_params_map(cx);
-    let id = params().get("id").cloned().unwrap_or_default();
+    let _ = params().get("id").cloned().unwrap_or_default();
 
-    log!("{id}");
+    //log!("{id}");
 
     // TODO:
     // 1. markdown to html
@@ -20,8 +20,9 @@ pub fn Post(cx: Scope) -> impl IntoView {
             <div class="data">
                 <div class="intro">
                     <p>"hi there"</p>
+                    <p>"still struggling with leptos server"</p>
+                    <p>"will finish markdown to html asap"</p>
                     <br/>
-
                 </div>
 
 
