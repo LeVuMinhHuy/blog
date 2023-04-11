@@ -5,7 +5,6 @@ use leptos_router::*;
 #[component]
 #[allow(non_snake_case)]
 pub fn Blog(_cx: Scope) -> impl IntoView {
-    // TODO: auto generate list of posts
     view! {
         _cx,
         <div>
@@ -21,21 +20,13 @@ pub fn Blog(_cx: Scope) -> impl IntoView {
                         <span class="post-title">"title"</span>
                     </div>
 
+
                     <div class="post">
-                        <span class="post-date">"09-12-2022"</span>
-                        <A href="1">"build this website using only rust-lang"</A>
-                    </div>
-                    <div class="post">
-                        <span class="post-date">"08-12-2022"</span>
-                        <A href="2">"from virtual dom to fine-grained reactivity, how leptos works"</A>
-                    </div>
-                    <div class="post">
-                        <span class="post-date">"07-12-2022"</span>
-                        <A href="2">"wasm with trunk"</A>
+                        <span class="post-date">"10-04-2023"</span>
+                        <A href="build-website-using-only-rust-lang">"build website using only rust lang"</A>
                     </div>
 
                 </div>
-
 
                 <Nav exclude={Some(NavElements::Blog)}/>
             </div>

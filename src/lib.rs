@@ -2,7 +2,7 @@ use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
 
-mod routes;
+pub mod routes;
 use routes::about::*;
 use routes::blog::*;
 use routes::error::*;
@@ -13,6 +13,7 @@ use routes::post::*;
 #[component]
 pub fn App(cx: Scope) -> impl IntoView {
     provide_meta_context(cx);
+
     view! {
         cx,
         <div id="root">
