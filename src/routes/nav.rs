@@ -6,12 +6,13 @@ pub enum NavElements {
     Blog,
     About,
     Home,
+    None,
 }
 
 #[component]
 #[allow(non_snake_case)]
 pub fn Nav(cx: Scope, exclude: Option<NavElements>) -> impl IntoView {
-    let exclude = exclude.unwrap();
+    let exclude = exclude.unwrap_or(NavElements::None);
     let nav_elements = vec![
         (NavElements::Blog, "/blog", "# blog"),
         (NavElements::About, "/about", "# more about me"),
