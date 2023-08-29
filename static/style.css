@@ -3,15 +3,9 @@
   --color-base: #444;
 }
 
-@font-face {
-  font-family: Sarasa;
-  src: url(font-sarasa.woff2) format("woff2");
-}
-
 body {
   margin: 40px auto;
   max-width: 640px;
-  font-family: Sarasa;
   color: var(--color-base);
   line-height: 1.6;
   font-size: 18px;
